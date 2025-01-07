@@ -4,6 +4,12 @@
 
 Перед началом нужно сделать go build и go install
 
+Если после этого при попытке запустить команду parser выдает ошибку: command not found, сделать: 
+
+export GOPATH=$(go env GOPATH)
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
+
 Приложение запускается командой parser с указанием нужного парсера. Их 2:
 
 - rendez - парсер сайта интернет-магазина Rendez-Vous
